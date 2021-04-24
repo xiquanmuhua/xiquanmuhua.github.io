@@ -100,12 +100,12 @@ Yume Shoka = 暮间的花园</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
         </ul>
       </div>
     </header>
@@ -150,91 +150,46 @@ Yume Shoka = 暮间的花园</title>
     
 
     <p>总之就假期很划水，所以博客搞好了这么久才开始写，好，话不多说直接写</p>
-<blockquote>
-<p>1.view_source</p>
-<blockquote>
-<p>题目描述：X老师让小宁同学查看一个网页的源代码，但小宁同学发现鼠标右键好像不管用了。<br>题目提示flag在源码里面，但通常的右键查看源码用不了，这个时候可以使用网页自带的f12页面查看，如果这个办法也不能使用（因为不知为啥现在环境打不开，所以不清楚），那就在网页地址前加上<code>view-source:</code>然后访问就能看到源码，然后找到flag，提交</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>2.robots</p>
-<blockquote>
-<p>题目描述：X老师上课讲了Robots协议，小宁同学却上课打了瞌睡，赶紧来教教小宁Robots协议是什么吧。<br>在网址的后面加上<code>/robots.txt</code>,查看该网址有哪些文件夹之类的，然后就输入进去，找到一个写着flag的php文件，打开它就拿到flag了<br>这个是robots协议的知识<br>以下我就复制一下百度，顺便自己复习一下：<br>robots协议也叫robots.txt（统一小写）是一种存放于网站根目录下的ASCII编码的文本文件，它通常告诉网络搜索引擎的漫游器（又称网络蜘蛛），此网站中的哪些内容是不应被搜索引擎的漫游器获取的，哪些是可以被漫游器获取的。因为一些系统中的URL是大小写敏感的，所以robots.txt的文件名应统一为小写。robots.txt应放置于网站的根目录下。如果想单独定义搜索引擎的漫游器访问子目录时的行为，那么可以将自定的设置合并到根目录下的robots.txt，或者使用robots元数据（Metadata，又称元数据）。<br>robots协议并不是一个规范，而只是约定俗成的，所以并不能保证网站的隐私。<br>robots.txt文件是一个文本文件，使用任何一个常见的文本编辑器，比如Windows系统自带的Notepad，就可以创建和编辑它 [1]  。robots.txt是一个协议，而不是一个命令。robots.txt是搜索引擎中访问网站的时候要查看的第一个文件。robots.txt文件告诉蜘蛛程序在服务器上什么文件是可以被查看的。<br>当一个搜索蜘蛛访问一个站点时，它会首先检查该站点根目录下是否存在robots.txt，如果存在，搜索机器人就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的搜索蜘蛛将能够访问网站上所有没有被口令保护的页面。百度官方建议，仅当您的网站包含不希望被搜索引擎收录的内容时，才需要使用robots.txt文件。如果您希望搜索引擎收录网站上所有内容，请勿建立robots.txt文件。<br>如果将网站视为酒店里的一个房间，robots.txt就是主人在房间门口悬挂的“请勿打扰”或“欢迎打扫”的提示牌。这个文件告诉来访的搜索引擎哪些房间可以进入和参观，哪些房间因为存放贵重物品，或可能涉及住户及访客的隐私而不对搜索引擎开放。但robots.txt不是命令，也不是防火墙，如同守门人无法阻止窃贼等恶意闯入者。<br>简单来说就是一种引导文件，告诉来访者什么能看，什么不能看，但别人接不接受你的引导就是另一个问题了</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>3.backup</p>
-<blockquote>
-<p>题目描述：X老师忘记删除备份文件，他派小宁同学去把备份文件找出来,一起来帮小宁同学吧！<br>打开界面，界面上问我是否知道这个index.php备份文件的名字，备份文件一般是加上bak作为后缀，所以就直接在网站后面输入/index.php.bak，下载这个文件打开就能拿到flag了。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>4.cookie</p>
-<blockquote>
-<p>题目描述：X老师告诉小宁他在cookie里放了些东西，小宁疑惑地想：‘这是夹心饼干的意思吗？’<br>界面中央写着：你知道什么是cookie吗？firefox直接f12点开请求：200的啥也没有，就看443的，看见cookie里写着look-here=cookie.php，就在网址后加上/cookie.php访问后写着See the http response，然后在Firefox的网络一栏点开200状态的一栏，看右边的消息头，发现叫flag的一栏，就拿到了<br>cookie我了解也不是很清楚（做留言板的时候登录认证也用的session），暂时就知道用于登录记录，然后保存在本地，所以容易被恶意利用，，需要进行随机加密，本菜鸡暂时还不会，会了一定补上</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>5.disabled_button</p>
-<blockquote>
-<p>题目描述：X老师今天上课讲了前端知识，然后给了大家一个不能按的按钮，小宁惊奇地发现这个按钮按不下去，到底怎么才能按下去呢？<br>这个就很简单了，打开，写着一个不能按的按钮，下面有一个写着flag的方框，按一下没反应，f12打开页面编辑器，看到按钮那一栏的代码有一个属性是disable，很明显这就是问题了，双击或者右键编辑把它删除，点一下周围，然后这个按钮就能按了，按一下，flag就显示了，基础的前端的button知识</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>6.weak_auth</p>
-<blockquote>
-<p>题目描述：小宁写了一个登陆验证页面，随手就设了一个密码。<br>直接login，得到一个弹窗，写着please login as admin,那就输入admin和admin，说不定就以这两个作为账号密码了呢（雾），得到写着password error的弹窗，然后按f12看看，写着maybe you need a dictionary,额，大概就是让我们用burpsuites的弱口令密码爆，密码就是123456，总之猜不到就试试burpsuites爆破吧</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>7.simple_php</p>
-<blockquote>
-<p>题目描述：小宁听说php是最好的语言,于是她简单学习之后写了几行php代码。<br>打开是一段代码</p>
-</blockquote>
-</blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">show_source(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="keyword">include</span>(<span class="string">&quot;config.php&quot;</span>);</span><br><span class="line"><span class="variable">$a</span>=@<span class="variable">$_GET</span>[<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line"><span class="variable">$b</span>=@<span class="variable">$_GET</span>[<span class="string">&#x27;b&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$a</span>==<span class="number">0</span> <span class="keyword">and</span> <span class="variable">$a</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$flag1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(is_numeric(<span class="variable">$b</span>))&#123;</span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$b</span>&gt;<span class="number">1234</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$flag2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<p>首先有用的信息=&gt;可以输入两个变量的值，a不为数字并且b满足!is_numeric(),也就是不能是纯数字且大于1234时，就会把flag给我，所以a的值就随便输入个不是数字的字符或者输入一堆首字符为字符或0的非纯数字，当然00也是可以的，b就输一个大于1234的数，后面可以添任意字符，然后访问就能在页面得到flag<br>代码审计<br>常用的php正则</p>
-</blockquote>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$_SERVER|$_COOKIE|$_REQUEST|$_GET|$_POST 获取用户输入</span><br><span class="line"></span><br><span class="line">eval(|assert(|system( 命令执行</span><br><span class="line"></span><br><span class="line">require(|require_once(|include(|include_once( 文件包含</span><br><span class="line"></span><br><span class="line">file_get_contents(|file(|fopen(|highlight_file(|show_source(|unlink 文件读取，写入，删除</span><br><span class="line"></span><br><span class="line">simplexml_load_string XXE</span><br><span class="line"></span><br><span class="line">unserialize 反序列化漏洞</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<p>复制粘贴太长了不看，直接贴网站<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuc29odS5jb20vYS8zOTc4NjEyNDlfNzUwNjI4">https://www.sohu.com/a/397861249_750628</span></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>8.get_post</p>
-<blockquote>
-<p>题目描述：X老师告诉小宁同学HTTP通常使用两种请求方法，你知道是哪两种吗？<br>点开可以看到叫我传值，传就完事了，get直接在url传值，post可以使用Firefox的插件hackbar传值，直接编辑HTML写一个表单也是可以的，毕竟值都告诉我们了，刚刚终于打开了，确实可以这样操作</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>9.xff_referer</p>
-<blockquote>
-<p>题目描述：X老师告诉小宁其实xff和referer是可以伪造的。<br>这里就要用到burpsuites了，抓包，然后转到重发器慢慢操作，要求ip地址必须为<code>123.123.123.123</code>，所以加个<code>X-Forwarded-For:123.123.123.123</code>,发送，返回界面要求必须来自<code>www.google.com</code>,所以加个<code>Referer:www.google.com</code>,发送就能在源码得到了，伪造ip也可以用Firefox的插件X-Forwarded-For Header，非常简单</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>10.webshell</p>
-<blockquote>
-<p>题目描述：小宁百度了php一句话,觉着很有意思,并且把它放在index.php里。<br>打开网址，看到-&gt;你会使用webshell吗？<code>&lt;?php @eval($_POST[&#39;shell&#39;]);?&gt; </code>,一句话木马已经给我整好了，只要我传进去就行了，用hackbar传post进去就行，或者还是构造表单传，先<code>system(&quot;ls&quot;);</code>看文件，然后就读取那个文件，比方说<code>file_get_contents(</code>,或者<code>highlight(</code>之类的都行，就能得到flag了<br>暂时能看懂这种简单的，之后再去试试需要自己构造的</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>11.command_execution</p>
-<blockquote>
-<p>题目描述：小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。<br>打开网址，让我输入个地址ping一下，我就输个<code>123.123.123.123</code>，然后ping,返回了，然后因为是在命令行里的指令，所以想到了加个<code>|</code>符号，就可以在命令行后面输入自己想写的命令，比如说自己在cmd里写个<code>123.123.123.123|dir</code>，就会跳出当前文件夹下的文件，所以就试着在框里输入，于是返回了index.php,感觉不是我想要的，所以返回上一级，也就是<code>dir ../..</code>,然后一个文件夹一个文件夹打开看，都没有,继续返回<code>../../..</code>，然后一个个打开，用眼睛去看，终于在home里面找到一个flag.txt,于是我就<code>cat ../../../home/flag.txt</code>，终于拿到了flag<br>当然也可以把<code>|</code>换成<code>&amp;</code>，<code>|</code>运算符是执行<code>|</code>后面的语句，如果|前面或者后面的语句不能执行就会直接报错，然后&amp;是符号前后的都会执行，但如果哪个错就会报错哪个，但正确的指令仍然会运行，然后还有<code>||</code>和<code>&amp;&amp;</code>，这两个的功能和单个的恰好相反,也就是说<code>&amp;&amp;</code>的用法和<code>|</code>一样，<code>||</code>的用法和<code>&amp;</code>一样，（暂时个人感觉是这样，如果以后发现有什么问题再补上吧）</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>12.simple_js</p>
-<blockquote>
-<p>题目描述：小宁发现了一个网页，但却一直输不对密码。(Flag格式为 Cyberpeace{xxxxxxxxx} )<br>打开看到弹窗，输入几下都是返回fauxpasword，果然还是得祖传f12，看到一串逗号隔开的数字，打开devc++,将这些数字统统转化成字符，就是Fauxpsword，然后往下看，一堆x开头的数字，想来是16进制，然后打开在线解码，当然devc++也行，然后又是一堆数字，再转化成字符，根据提示，打包提交，确实是flag<br>这个就是js弹窗的知识点，会看js代码就行</p>
-</blockquote>
-</blockquote>
-<p>本傻瓜的xctf新手场之旅就到此结束了，拜了个拜</p>
+<h1 id="1-view-source"><a href="#1-view-source" class="headerlink" title="1.view_source"></a>1.view_source</h1><p>题目描述：X老师让小宁同学查看一个网页的源代码，但小宁同学发现鼠标右键好像不管用了。<br>题目提示flag在源码里面，但通常的右键查看源码用不了，这个时候可以使用网页自带的f12页面查看，如果这个办法也不能使用（因为不知为啥现在环境打不开，所以不清楚），那就在网页地址前加上<code>view-source:</code>然后访问就能看到源码，然后找到flag，提交  </p>
+<h1 id="2-robots"><a href="#2-robots" class="headerlink" title="2.robots"></a>2.robots</h1><p>题目描述：X老师上课讲了Robots协议，小宁同学却上课打了瞌睡，赶紧来教教小宁Robots协议是什么吧。<br>在网址的后面加上<code>/robots.txt</code>,查看该网址有哪些文件夹之类的，然后就输入进去，找到一个写着flag的php文件，打开它就拿到flag了<br>这个是robots协议的知识<br>以下我就复制一下百度，顺便自己复习一下：<br>robots协议也叫robots.txt（统一小写）是一种存放于网站根目录下的ASCII编码的文本文件，它通常告诉网络搜索引擎的漫游器（又称网络蜘蛛），此网站中的哪些内容是不应被搜索引擎的漫游器获取的，哪些是可以被漫游器获取的。因为一些系统中的URL是大小写敏感的，所以robots.txt的文件名应统一为小写。robots.txt应放置于网站的根目录下。如果想单独定义搜索引擎的漫游器访问子目录时的行为，那么可以将自定的设置合并到根目录下的robots.txt，或者使用robots元数据（Metadata，又称元数据）。<br>robots协议并不是一个规范，而只是约定俗成的，所以并不能保证网站的隐私。<br>robots.txt文件是一个文本文件，使用任何一个常见的文本编辑器，比如Windows系统自带的Notepad，就可以创建和编辑它 。robots.txt是一个协议，而不是一个命令。robots.txt是搜索引擎中访问网站的时候要查看的第一个文件。robots.txt文件告诉蜘蛛程序在服务器上什么文件是可以被查看的。<br>当一个搜索蜘蛛访问一个站点时，它会首先检查该站点根目录下是否存在robots.txt，如果存在，搜索机器人就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的搜索蜘蛛将能够访问网站上所有没有被口令保护的页面。百度官方建议，仅当您的网站包含不希望被搜索引擎收录的内容时，才需要使用robots.txt文件。如果您希望搜索引擎收录网站上所有内容，请勿建立robots.txt文件。<br>如果将网站视为酒店里的一个房间，robots.txt就是主人在房间门口悬挂的“请勿打扰”或“欢迎打扫”的提示牌。这个文件告诉来访的搜索引擎哪些房间可以进入和参观，哪些房间因为存放贵重物品，或可能涉及住户及访客的隐私而不对搜索引擎开放。但robots.txt不是命令，也不是防火墙，如同守门人无法阻止窃贼等恶意闯入者。<br>简单来说就是一种引导文件，告诉来访者什么能看，什么不能看，但别人接不接受你的引导就是另一个问题了  </p>
+<h1 id="3-backup"><a href="#3-backup" class="headerlink" title="3.backup"></a>3.backup</h1><p>题目描述：X老师忘记删除备份文件，他派小宁同学去把备份文件找出来,一起来帮小宁同学吧！<br>打开界面，界面上问我是否知道这个index.php备份文件的名字，备份文件一般是加上bak作为后缀，所以就直接在网站后面输入/index.php.bak，下载这个文件打开就能拿到flag了。  </p>
+<h1 id="4-cookie"><a href="#4-cookie" class="headerlink" title="4.cookie"></a>4.cookie</h1><p>题目描述：X老师告诉小宁他在cookie里放了些东西，小宁疑惑地想：‘这是夹心饼干的意思吗？’<br>界面中央写着：你知道什么是cookie吗？firefox直接f12点开请求：200的啥也没有，就看443的，看见cookie里写着look-here=cookie.php，就在网址后加上/cookie.php访问后写着See the http response，然后在Firefox的网络一栏点开200状态的一栏，看右边的消息头，发现叫flag的一栏，就拿到了<br>cookie我了解也不是很清楚（做留言板的时候登录认证也用的session），暂时就知道用于登录记录，然后保存在本地，所以容易被恶意利用，，需要进行随机加密，本菜鸡暂时还不会，会了一定补上  </p>
+<h1 id="5-disabled-button"><a href="#5-disabled-button" class="headerlink" title="5.disabled_button"></a>5.disabled_button</h1><p>题目描述：X老师今天上课讲了前端知识，然后给了大家一个不能按的按钮，小宁惊奇地发现这个按钮按不下去，到底怎么才能按下去呢？<br>这个就很简单了，打开，写着一个不能按的按钮，下面有一个写着flag的方框，按一下没反应，f12打开页面编辑器，看到按钮那一栏的代码有一个属性是disable，很明显这就是问题了，双击或者右键编辑把它删除，点一下周围，然后这个按钮就能按了，按一下，flag就显示了，基础的前端的button知识  </p>
+<h1 id="6-weak-auth"><a href="#6-weak-auth" class="headerlink" title="6.weak_auth"></a>6.weak_auth</h1><p>题目描述：小宁写了一个登陆验证页面，随手就设了一个密码。<br>直接login，得到一个弹窗，写着please login as admin,那就输入admin和admin，说不定就以这两个作为账号密码了呢（雾），得到写着password error的弹窗，然后按f12看看，写着maybe you need a dictionary,额，大概就是让我们用burpsuites的弱口令密码爆，密码就是123456，总之猜不到就试试burpsuites爆破吧  </p>
+<h1 id="7-simple-php"><a href="#7-simple-php" class="headerlink" title="7.simple_php"></a>7.simple_php</h1><p>题目描述：小宁听说php是最好的语言,于是她简单学习之后写了几行php代码。<br>打开是一段代码  </p>
+<pre><code class="php">&lt;?php
+show_source(__FILE__);
+include(&quot;config.php&quot;);
+$a=@$_GET[&#39;a&#39;];
+$b=@$_GET[&#39;b&#39;];
+if($a==0 and $a)&#123;
+    echo $flag1;
+&#125;
+if(is_numeric($b))&#123;
+    exit();
+&#125;
+if($b&gt;1234)&#123;
+    echo $flag2;
+&#125;
+?&gt;</code></pre>
+<p>首先有用的信息=&gt;可以输入两个变量的值，a不为数字并且b满足!is_numeric(),也就是不能是纯数字且大于1234时，就会把flag给我，所以a的值就随便输入个不是数字的字符或者输入一堆首字符为字符或0的非纯数字，当然00也是可以的，b就输一个大于1234的数，后面可以添任意字符，然后访问就能在页面得到flag<br>代码审计<br>常用的php正则  </p>
+<pre><code class="sql">$_SERVER|$_COOKIE|$_REQUEST|$_GET|$_POST 获取用户输入
+
+eval(|assert(|system( 命令执行
+
+require(|require_once(|include(|include_once( 文件包含
+
+file_get_contents(|file(|fopen(|highlight_file(|show_source(|unlink 文件读取，写入，删除
+
+simplexml_load_string XXE
+
+unserialize 反序列化漏洞</code></pre>
+<p>复制粘贴太长了不看，直接贴网站-&gt;<span class="exturl" data-url="aHR0cHM6Ly93d3cuc29odS5jb20vYS8zOTc4NjEyNDlfNzUwNjI4">代码审计</span></p>
+<h1 id="8-get-post"><a href="#8-get-post" class="headerlink" title="8.get_post"></a>8.get_post</h1><p>题目描述：X老师告诉小宁同学HTTP通常使用两种请求方法，你知道是哪两种吗？<br>点开可以看到叫我传值，传就完事了，get直接在url传值，post可以使用Firefox的插件hackbar传值，直接编辑HTML写一个表单也是可以的，毕竟值都告诉我们了，刚刚终于打开了，确实可以这样操作  </p>
+<h1 id="9-xff-referer"><a href="#9-xff-referer" class="headerlink" title="9.xff_referer"></a>9.xff_referer</h1><p>题目描述：X老师告诉小宁其实xff和referer是可以伪造的。<br>这里就要用到burpsuites了，抓包，然后转到重发器慢慢操作，要求ip地址必须为<code>123.123.123.123</code>，所以加个<code>X-Forwarded-For:123.123.123.123</code>,发送，返回界面要求必须来自<code>www.google.com</code>,所以加个<code>Referer:www.google.com</code>,发送就能在源码得到了，伪造ip也可以用Firefox的插件X-Forwarded-For Header，非常简单  </p>
+<h1 id="10-webshell"><a href="#10-webshell" class="headerlink" title="10.webshell"></a>10.webshell</h1><p>题目描述：小宁百度了php一句话,觉着很有意思,并且把它放在index.php里。<br>打开网址，看到-&gt;你会使用webshell吗？<code>&lt;?php @eval($_POST[&#39;shell&#39;]);?&gt; </code>,一句话木马已经给我整好了，只要我传进去就行了，用hackbar传post进去就行，或者还是构造表单传，先<code>system(&quot;ls&quot;);</code>看文件，然后就读取那个文件，比方说<code>file_get_contents(</code>,或者<code>highlight(</code>之类的都行，就能得到flag了<br>暂时能看懂这种简单的，之后再去试试需要自己构造的  </p>
+<h1 id="11-command-execution"><a href="#11-command-execution" class="headerlink" title="11.command_execution"></a>11.command_execution</h1><p>题目描述：小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。<br>打开网址，让我输入个地址ping一下，我就输个<code>123.123.123.123</code>，然后ping,返回了，然后因为是在命令行里的指令，所以想到了加个<code>|</code>符号，就可以在命令行后面输入自己想写的命令，比如说自己在cmd里写个<code>123.123.123.123|dir</code>，就会跳出当前文件夹下的文件，所以就试着在框里输入，于是返回了index.php,感觉不是我想要的，所以返回上一级，也就是<code>dir ../..</code>,然后一个文件夹一个文件夹打开看，都没有,继续返回<code>../../..</code>，然后一个个打开，用眼睛去看，终于在home里面找到一个flag.txt,于是我就<code>cat ../../../home/flag.txt</code>，终于拿到了flag<br>当然也可以把<code>|</code>换成<code>&amp;</code>，<code>|</code>运算符是执行<code>|</code>后面的语句，如果|前面或者后面的语句不能执行就会直接报错，然后&amp;是符号前后的都会执行，但如果哪个错就会报错哪个，但正确的指令仍然会运行，然后还有<code>||</code>和<code>&amp;&amp;</code>，这两个的功能和单个的恰好相反,也就是说<code>&amp;&amp;</code>的用法和<code>|</code>一样，<code>||</code>的用法和<code>&amp;</code>一样，（<del>暂时个人感觉是这样，如果以后发现有什么问题再补上吧</del>）,<code>||</code>和<code>&amp;&amp;</code>是条件<code>or</code>和<code>and</code>，而<code>|</code>,<code>&amp;</code>,<code>^</code>,<code>~</code>以及<code>&gt;&gt;</code>和<code>&lt;&lt;</code>都是位运算<br>详情见<span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS93M2Nub3RlL2JpdC1vcGVyYXRpb24uaHRtbA==">位运算</span>  </p>
+<h1 id="12-simple-js"><a href="#12-simple-js" class="headerlink" title="12.simple_js"></a>12.simple_js</h1><p>题目描述：小宁发现了一个网页，但却一直输不对密码。(Flag格式为 Cyberpeace{xxxxxxxxx} )<br>打开看到弹窗，输入几下都是返回fauxpasword，果然还是得祖传f12，看到一串逗号隔开的数字，打开devc++,将这些数字统统转化成字符，就是Fauxpsword，然后往下看，一堆x开头的数字，想来是16进制，然后打开在线解码，当然devc++也行，然后又是一堆数字，再转化成字符，根据提示，打包提交，确实是flag<br>这个就是js弹窗的知识点，会看js代码就行<br>本傻瓜的xctf新手场之旅就到此结束了，拜了个拜</p>
 
   </div>
 
@@ -246,7 +201,7 @@ Yume Shoka = 暮间的花园</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-03-28 19:24:37" itemprop="dateModified" datetime="2021-03-28T19:24:37+08:00">2021-03-28</time>
+    <time title="Modified: 2021-04-24 12:20:28" itemprop="dateModified" datetime="2021-04-24T12:20:28+08:00">2021-04-24</time>
   </span>
 </div>
 
@@ -301,7 +256,7 @@ Yume Shoka = 暮间的花园</title>
     <div class="item left">
       
 
-  <a href="/2020/12/14/ctf%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86%E4%B8%8E%E5%BF%83%E5%BE%97/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfw2t96j20zk0m8x6p.jpg" title="ctf学习经历与心得">
+  <a href="/2020/12/14/ctf%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86%E4%B8%8E%E5%BF%83%E5%BE%97/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesng5oej20zk0m87d4.jpg" title="ctf学习经历与心得">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>ctf学习经历与心得</h3>
@@ -309,6 +264,14 @@ Yume Shoka = 暮间的花园</title>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2021/04/24/%E5%82%BB%E8%8F%9Cmuhua%E5%86%99%E4%BA%86sqlilabs-less-1-17/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciszlczyj20zk0m816d.jpg" title="傻菜muhua写了sqlilabs less-1-17">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>傻菜muhua写了sqlilabs less-1-17</h3>
+  </a>
+
     </div>
 </div>
 
@@ -325,6 +288,7 @@ Yume Shoka = 暮间的花园</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-view-source"><span class="toc-number">1.</span> <span class="toc-text">1.view_source</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-robots"><span class="toc-number">2.</span> <span class="toc-text">2.robots</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-backup"><span class="toc-number">3.</span> <span class="toc-text">3.backup</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-cookie"><span class="toc-number">4.</span> <span class="toc-text">4.cookie</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-disabled-button"><span class="toc-number">5.</span> <span class="toc-text">5.disabled_button</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-weak-auth"><span class="toc-number">6.</span> <span class="toc-text">6.weak_auth</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-simple-php"><span class="toc-number">7.</span> <span class="toc-text">7.simple_php</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-get-post"><span class="toc-number">8.</span> <span class="toc-text">8.get_post</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-xff-referer"><span class="toc-number">9.</span> <span class="toc-text">9.xff_referer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-webshell"><span class="toc-number">10.</span> <span class="toc-text">10.webshell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-command-execution"><span class="toc-number">11.</span> <span class="toc-text">11.command_execution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-simple-js"><span class="toc-number">12.</span> <span class="toc-text">12.simple_js</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -339,7 +303,7 @@ Yume Shoka = 暮间的花园</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">2</span>
+        <span class="count">3</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -370,10 +334,12 @@ Yume Shoka = 暮间的花园</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2020/12/14/ctf%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86%E4%B8%8E%E5%BF%83%E5%BE%97/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2021/04/24/%E5%82%BB%E8%8F%9Cmuhua%E5%86%99%E4%BA%86sqlilabs-less-1-17/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -397,6 +363,15 @@ Yume Shoka = 暮间的花园</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/03/28/%E5%82%BB%E7%93%9Cmuhua%E5%86%99xctf%E7%9A%84web%E6%96%B0%E6%89%8B%E5%9C%BA%E9%A2%98%E8%A7%A3/" title="傻瓜muhua写xctf的web新手场题解">傻瓜muhua写xctf的web新手场题解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2020/12/14/ctf%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86%E4%B8%8E%E5%BF%83%E5%BE%97/" title="ctf学习经历与心得">ctf学习经历与心得</a></span>
   </li>
 
@@ -406,7 +381,7 @@ Yume Shoka = 暮间的花园</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/28/%E5%82%BB%E7%93%9Cmuhua%E5%86%99xctf%E7%9A%84web%E6%96%B0%E6%89%8B%E5%9C%BA%E9%A2%98%E8%A7%A3/" title="傻瓜muhua写xctf的web新手场题解">傻瓜muhua写xctf的web新手场题解</a></span>
+    <span><a href="/2021/04/24/%E5%82%BB%E8%8F%9Cmuhua%E5%86%99%E4%BA%86sqlilabs-less-1-17/" title="傻菜muhua写了sqlilabs less-1-17">傻菜muhua写了sqlilabs less-1-17</a></span>
   </li>
 
   </ul>
