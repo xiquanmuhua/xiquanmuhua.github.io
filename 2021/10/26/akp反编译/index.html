@@ -1,0 +1,493 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="暮间的花园" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="暮间的花园" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="暮间的花园" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="复现" />
+
+
+<link rel="canonical" href="http://example.com/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/">
+
+
+
+  <title>
+apk反编译工具的安装及使用 |
+Yume Shoka = 暮间的花园</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">apk反编译工具的安装及使用
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-10-26 20:47:54">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-10-26T20:47:54+08:00">2021-10-26</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="cn">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="muhua">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="暮间的花园">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="apk反编译"><a href="#apk反编译" class="headerlink" title="apk反编译"></a>apk反编译</h1><p>打拟态，一道题也做不出，结果队友ak了</p>
+<p>只好半夜看看mobile的题，查了一下说要下载模拟器，网站贼卡，只好上床，结果逛贴吧的时候突然想到贴吧会不会有呢，一搜andriod还真有</p>
+<h2 id="pwntool"><a href="#pwntool" class="headerlink" title="pwntool"></a>pwntool</h2><p>这个主要是看xml文件用的</p>
+<p>官网下载：<span class="exturl" data-url="aHR0cHM6Ly9pYm90cGVhY2hlcy5naXRodWIuaW8vQXBrdG9vbC9pbnN0YWxsLw==">官网</span></p>
+<p>点击左上方的：<code>Current Version: 2.6.0</code></p>
+<p>我当时的<span class="exturl" data-url="aHR0cHM6Ly9iYnVzZXJ1cGxvYWRzLnMzLmFtYXpvbmF3cy5jb20vMGJlY2Y2YTEtMTcwNi00ZjJlLTlhZTYtODkxZTAwYThkZDVmL2Rvd25sb2Fkcy8yNmEyYjQ2ZC0wOTA4LTQ2OGMtODY2Ni1jMGMxYTUxZGIzOGMvYXBrdG9vbF8yLjYuMC5qYXI/U2lnbmF0dXJlPXFBWnBaY0ZXcGtpUmJBdkt2WFVZVEc1UmdqVT0mRXhwaXJlcz0xNjM1MTE5NTYyJkFXU0FjY2Vzc0tleUlkPUFLSUE2S09TRTNCTkpSUkZVVVg2JnZlcnNpb25JZD1SblBkZDdRRWpteTdzWlYyMnp6azNrQjUueVM5ZmZkMSZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWF0dGFjaG1lbnQ7JTIwZmlsZW5hbWU9JTIyYXBrdG9vbF8yLjYuMC5qYXIlMjI=">下载地址</span></p>
+<p>下载之后直接在c盘下放了个apktool文件夹，然后把该jar文件放进去，接着创建个apktool.bat文件</p>
+<p>编辑:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%PATH_BASE%</span>&quot; == &quot;&quot; <span class="built_in">set</span> PATH_BASE=<span class="variable">%PATH%</span></span><br><span class="line"><span class="built_in">set</span> <span class="built_in">PATH</span>=<span class="variable">%CD%</span>;<span class="variable">%PATH_BASE%</span>;</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">65001</span> <span class="number">2</span>&gt;<span class="built_in">nul</span> &gt;<span class="built_in">nul</span></span><br><span class="line">java -jar -Duser.language=en -Dfile.encoding=UTF8 &quot;%~dp0\apktool.jar&quot; %*</span><br></pre></td></tr></table></figure>
+
+<p>jar文件改名为<code>apktool.jar</code></p>
+<p>打开命令行，进入当前路径下，输入命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool.bat d -f c:\HaHaHaHa.apk        <span class="comment">#d是反编译，-f是强制，之后是apk文件的绝对路径，再之后可以自定义导出路径</span></span><br></pre></td></tr></table></figure>
+<p>如果不定义导出路径，就能在当前文件夹下得到与akp文件同名的文件夹，</p>
+<p>smali文件夹里都是smali文件，这是源码，但不是java形式，据说很不好看懂，所以这里就只看看xml文件就行</p>
+<p>例如得到的是</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;no&quot;?&gt;</span><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span> <span class="attr">android:compileSdkVersion</span>=<span class="string">&quot;30&quot;</span> <span class="attr">android:compileSdkVersionCodename</span>=<span class="string">&quot;11&quot;</span> <span class="attr">package</span>=<span class="string">&quot;com.test.hahahaha&quot;</span> <span class="attr">platformBuildVersionCode</span>=<span class="string">&quot;30&quot;</span> <span class="attr">platformBuildVersionName</span>=<span class="string">&quot;11&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span> <span class="attr">android:allowBackup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:appComponentFactory</span>=<span class="string">&quot;androidx.core.app.CoreComponentFactory&quot;</span> <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span> <span class="attr">android:label</span>=<span class="string">&quot;@string/app_name&quot;</span> <span class="attr">android:roundIcon</span>=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span> <span class="attr">android:supportsRtl</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:theme</span>=<span class="string">&quot;@style/Theme.HaHaHaHa&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;com.test.hahahaha.WelcomeActivity&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;com.test.hahahaha.MainActivity&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="dex2jar"><a href="#dex2jar" class="headerlink" title="dex2jar"></a>dex2jar</h2><p>这个可以反编译<code>.dex</code>文件，得到<code>.jar</code>文件</p>
+<p>这里可以直接下载:<span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvZGV4Mmphci8=">下载地址</span></p>
+<p>解压，执行这个文件：<code>d2j-dex2jar.bat</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dex2jar-<span class="number">2</span>.<span class="number">0</span>&gt;d2j-dex2jar.bat D:\classes.dex</span><br></pre></td></tr></table></figure>
+<p>后面的是.dex文件的绝对路径</p>
+<p>既可以在当前路径下得到同名的后缀为<code>.jar</code>的文件</p>
+<p><code>.dex</code>文件是由apk文件解压得到的，将apk文件放入010编辑器很明显的可以看到是以PK开头的压缩包文件格式</p>
+<p>将apk文件修改后缀名为zip再解压即可</p>
+<p>虽然这里也有一个xml文件，但这个xml文件是人看不了的，所以老老实实用第一个工具反编译再看吧</p>
+<p>这里即可得到dex文件</p>
+<h2 id="JD-GUI"><a href="#JD-GUI" class="headerlink" title="JD-GUI"></a>JD-GUI</h2><p>接着就需要看这个jar文件</p>
+<p>这个工具更简单</p>
+<p><span class="exturl" data-url="aHR0cDovL2phdmEtZGVjb21waWxlci5naXRodWIuaW8v">下载地址</span></p>
+<p>直接下载windows版本，解压，里面有一个可执行文件<code>jd-gui.exe</code></p>
+<p>直接运行就打开可视化页面，将dex文件拖进去即可</p>
+<p>来简单看一下，xml文件中<code>&lt;activity android:name=&quot;com.test.hahahaha.MainActivity&quot;/&gt;</code>这里显示的name的值</p>
+<p>那么根据这个指引即可看到com模块下有一个<code>test.hahahaha</code>，再往下就是MainActivity的源码部分，然后点击源码中的方法，还能直接跳进该方法对应的源文件中</p>
+<p>肥肠好用~</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%A4%8D%E7%8E%B0/" rel="tag"><i class="ic i-tag"></i> 复现</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-02-28 18:23:07" itemprop="dateModified" datetime="2022-02-28T18:23:07+08:00">2022-02-28</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="muhua WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="muhua Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="muhua PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>muhua <i class="ic i-at"><em>@</em></i>暮间的花园
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" title="apk反编译工具的安装及使用">http://example.com/2021/10/26/akp反编译/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/09/28/(2)check_in_wp/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4wqtg4j20zk0m8x6p.jpg" title="2021下半年的一些比赛部分题解">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>2021下半年的一些比赛部分题解</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#apk%E5%8F%8D%E7%BC%96%E8%AF%91"><span class="toc-number">1.</span> <span class="toc-text">apk反编译</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pwntool"><span class="toc-number">1.1.</span> <span class="toc-text">pwntool</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dex2jar"><span class="toc-number">1.2.</span> <span class="toc-text">dex2jar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JD-GUI"><span class="toc-number">1.3.</span> <span class="toc-text">JD-GUI</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="muhua"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">muhua</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">4</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/20/sqlbypass/" title="sqlbypass">sqlbypass</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/03/buu%E8%AE%B0%E5%BD%95(1)%E9%99%84/" title="buu记录(1)附（文章上传故障单独修复）">buu记录(1)附（文章上传故障单独修复）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/28/%E8%BF%91%E6%9C%9F%E9%83%A8%E5%88%86%E8%B5%9B%E9%A2%98%E7%9A%84wp/" title="近期部分赛题的wp">近期部分赛题的wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" title="apk反编译工具的安装及使用">apk反编译工具的安装及使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" title="学习ctf的体验与心得">学习ctf的体验与心得</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/02/buu%E8%AE%B0%E5%BD%95(1)/" title="buu记录(1)">buu记录(1)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/12/phpcharact/" title="php特性部分知识点">php特性部分知识点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/28/(2)check_in_wp/" title="2021下半年的一些比赛部分题解">2021下半年的一些比赛部分题解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/28/sqlilabtrain/" title="sqlilabs less-1-17">sqlilabs less-1-17</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">muhua @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/10/26/akp反编译/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
