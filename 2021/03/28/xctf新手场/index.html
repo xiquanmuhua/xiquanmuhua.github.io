@@ -1,0 +1,483 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="暮间的花园" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="暮间的花园" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="暮间的花园" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="复现" />
+
+
+<link rel="canonical" href="http://example.com/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/">
+
+
+
+  <title>
+xctf新手场 |
+Yume Shoka = 暮间的花园</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">xctf新手场
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-03-28 12:34:32">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-03-28T12:34:32+08:00">2021-03-28</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="cn">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="muhua">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="暮间的花园">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>总之就假期很划水，所以博客搞好了这么久才开始写，好，话不多说直接写</p>
+<h1 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h1><p>题目描述：X老师让小宁同学查看一个网页的源代码，但小宁同学发现鼠标右键好像不管用了。<br>题目提示flag在源码里面，但通常的右键查看源码用不了，这个时候可以使用网页自带的f12页面查看，如果这个办法也不能使用（因为不知为啥现在环境打不开，所以不清楚），那就在网页地址前加上<code>view-source:</code>然后访问就能看到源码，然后找到flag，提交<br>（附：快捷键 Ctrl+F4）</p>
+<h1 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h1><p>题目描述：X老师上课讲了Robots协议，小宁同学却上课打了瞌睡，赶紧来教教小宁Robots协议是什么吧。<br>在网址的后面加上<code>/robots.txt</code>,查看该网址有哪些文件夹之类的，然后就输入进去，找到一个写着flag的php文件，打开它就拿到flag了<br>这个是robots协议的知识<br>以下我就复制一下百度，顺便自己复习一下：<br>robots协议也叫<code>robots.txt</code>（统一小写）是一种存放于网站根目录下的ASCII编码的文本文件，它通常告诉网络搜索引擎的漫游器（又称网络蜘蛛），此网站中的哪些内容是不应被搜索引擎的漫游器获取的，哪些是可以被漫游器获取的。因为一些系统中的URL是大小写敏感的，所以<code>robots.txt</code>的文件名应统一为小写。<code>robots.txt</code>应放置于网站的根目录下。如果想单独定义搜索引擎的漫游器访问子目录时的行为，那么可以将自定的设置合并到根目录下的<code>robots.txt</code>，或者使用robots元数据（Metadata，又称元数据）。<br>robots协议并不是一个规范，而只是约定俗成的，所以并不能保证网站的隐私。<br><code>robots.txt</code>文件是一个文本文件，使用任何一个常见的文本编辑器，比如Windows系统自带的Notepad，就可以创建和编辑它 。<code>robots.txt</code>是一个协议，而不是一个命令。<code>robots.txt</code>是搜索引擎中访问网站的时候要查看的第一个文件。<code>robots.txt</code>文件告诉蜘蛛程序在服务器上什么文件是可以被查看的。<br>当一个搜索蜘蛛访问一个站点时，它会首先检查该站点根目录下是否存在<code>robots.txt</code>，如果存在，搜索机器人就会按照该文件中的内容来确定访问的范围；如果该文件不存在，所有的搜索蜘蛛将能够访问网站上所有没有被口令保护的页面。百度官方建议，仅当您的网站包含不希望被搜索引擎收录的内容时，才需要使用<code>robots.txt</code>文件。如果您希望搜索引擎收录网站上所有内容，请勿建立<code>robots.txt</code>文件。<br>如果将网站视为酒店里的一个房间，<code>robots.txt</code>就是主人在房间门口悬挂的“请勿打扰”或“欢迎打扫”的提示牌。这个文件告诉来访的搜索引擎哪些房间可以进入和参观，哪些房间因为存放贵重物品，或可能涉及住户及访客的隐私而不对搜索引擎开放。但robots.txt不是命令，也不是防火墙，如同守门人无法阻止窃贼等恶意闯入者。<br>简单来说就是一种引导文件，告诉来访者什么能看，什么不能看，但别人接不接受你的引导就是另一个问题了</p>
+<h1 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h1><p>题目描述：X老师忘记删除备份文件，他派小宁同学去把备份文件找出来,一起来帮小宁同学吧！<br>打开界面，界面上问我是否知道这个<code>index.php</code>备份文件的名字，备份文件一般是加上bak作为后缀，所以就直接在网站后面输入<code>/index.php.bak</code>，下载这个文件打开就能拿到flag了。</p>
+<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p>题目描述：X老师告诉小宁他在cookie里放了些东西，小宁疑惑地想：‘这是夹心饼干的意思吗？’<br>界面中央写着：你知道什么是cookie吗？firefox直接f12点开请求：200的啥也没有，就看443的，看见cookie里写着<code>look-here=cookie.php</code>，就在网址后加上<code>/cookie.php</code>访问后写着<code>See the http response</code>，然后在Firefox的网络一栏点开200状态的一栏，看右边的消息头，发现叫flag的一栏，就拿到了<br>cookie我了解也不是很清楚（做留言板的时候登录认证也用的session），暂时就知道用于登录记录，然后保存在本地，所以容易被恶意利用，，需要进行随机加密，本菜鸡暂时还不会，会了一定补上</p>
+<h1 id="disabled-button"><a href="#disabled-button" class="headerlink" title="disabled_button"></a>disabled_button</h1><p>题目描述：X老师今天上课讲了前端知识，然后给了大家一个不能按的按钮，小宁惊奇地发现这个按钮按不下去，到底怎么才能按下去呢？<br>这个就很简单了，打开，写着一个不能按的按钮，下面有一个写着flag的方框，按一下没反应，f12打开页面编辑器，看到按钮那一栏的代码有一个属性是disable，很明显这就是问题了，双击或者右键编辑把它删除，点一下周围，然后这个按钮就能按了，按一下，flag就显示了，基础的前端的button知识</p>
+<h1 id="weak-auth"><a href="#weak-auth" class="headerlink" title="weak_auth"></a>weak_auth</h1><p>题目描述：小宁写了一个登陆验证页面，随手就设了一个密码。<br>直接login，得到一个弹窗，写着please login as admin,那就输入admin和admin，说不定就以这两个作为账号密码了呢（雾），得到写着password error的弹窗，然后按f12看看，写着maybe you need a dictionary,额，大概就是让我们用burpsuites的弱口令密码爆，密码就是123456，总之猜不到就试试burpsuites爆破吧</p>
+<h1 id="simple-php"><a href="#simple-php" class="headerlink" title="simple_php"></a>simple_php</h1><p>题目描述：小宁听说php是最好的语言,于是她简单学习之后写了几行php代码。<br>打开是一段代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">show_source</span>(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="keyword">include</span>(<span class="string">&quot;config.php&quot;</span>);</span><br><span class="line"><span class="variable">$a</span>=@<span class="variable">$_GET</span>[<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line"><span class="variable">$b</span>=@<span class="variable">$_GET</span>[<span class="string">&#x27;b&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$a</span>==<span class="number">0</span> <span class="keyword">and</span> <span class="variable">$a</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$flag1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">is_numeric</span>(<span class="variable">$b</span>))&#123;</span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$b</span>&gt;<span class="number">1234</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$flag2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先有用的信息&#x3D;&gt;可以输入两个变量的值，a不为数字并且b满足!is_numeric(),也就是不能是纯数字且大于1234时，就会把flag给我，所以a的值就随便输入个不是数字的字符或者输入一堆首字符为字符或0的非纯数字，当然00也是可以的，b就输一个大于1234的数，后面可以添任意字符，然后访问就能在页面得到flag<br>代码审计<br>常用的php正则</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$_SERVER|$_COOKIE|$_REQUEST|$_GET|$_POST 获取用户输入</span><br><span class="line"></span><br><span class="line">eval(|assert(|system( 命令执行</span><br><span class="line"></span><br><span class="line">require(|require_once(|include(|include_once( 文件包含</span><br><span class="line"></span><br><span class="line">file_get_contents(|file(|fopen(|highlight_file(|show_source(|unlink 文件读取，写入，删除</span><br><span class="line"></span><br><span class="line">simplexml_load_string XXE</span><br><span class="line"></span><br><span class="line">unserialize 反序列化漏洞</span><br></pre></td></tr></table></figure>
+<p>复制粘贴太长了不看，直接贴网站-&gt;<span class="exturl" data-url="aHR0cHM6Ly93d3cuc29odS5jb20vYS8zOTc4NjEyNDlfNzUwNjI4">代码审计</span></p>
+<h1 id="get-post"><a href="#get-post" class="headerlink" title="get_post"></a>get_post</h1><p>题目描述：X老师告诉小宁同学HTTP通常使用两种请求方法，你知道是哪两种吗？<br>点开可以看到叫我传值，传就完事了，get直接在url传值，post可以使用Firefox的插件hackbar传值，直接编辑HTML写一个表单也是可以的，毕竟值都告诉我们了，刚刚终于打开了，确实可以这样操作</p>
+<h1 id="xff-referer"><a href="#xff-referer" class="headerlink" title="xff_referer"></a>xff_referer</h1><p>题目描述：X老师告诉小宁其实xff和referer是可以伪造的。<br>这里就要用到burpsuites了，抓包，然后转到重发器慢慢操作，要求ip地址必须为<code>123.123.123.123</code>，所以加个<code>X-Forwarded-For:123.123.123.123</code>,发送，返回界面要求必须来自<code>www.google.com</code>,所以加个<code>Referer:www.google.com</code>,发送就能在源码得到了，伪造ip也可以用Firefox的插件<code>X-Forwarded-For Header</code>，非常简单</p>
+<h1 id="webshell"><a href="#webshell" class="headerlink" title="webshell"></a>webshell</h1><p>题目描述：小宁百度了php一句话,觉着很有意思,并且把它放在index.php里。<br>打开网址，看到-&gt;你会使用webshell吗？<code>&lt;?php @eval($_POST[&#39;shell&#39;]);?&gt;</code> ,一句话木马已经给我整好了，只要我传进去就行了，用hackbar传post进去就行，或者还是构造表单传，先<code>system(&quot;ls&quot;);</code>看文件，然后就读取那个文件，比方说<code>file_get_contents</code>,或者<code>highlight</code>之类的都行，就能得到flag了<br>暂时能看懂这种简单的，之后再去试试需要自己构造的</p>
+<h1 id="command-execution"><a href="#command-execution" class="headerlink" title="command_execution"></a>command_execution</h1><p>题目描述：小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。<br>打开网址，让我输入个地址ping一下，我就输个<code>123.123.123.123</code>，然后ping,返回了，然后因为是在命令行里的指令，所以想到了加个<code>|</code>符号，就可以在命令行后面输入自己想写的命令，比如说自己在cmd里写个<code>123.123.123.123|dir</code>，就会跳出当前文件夹下的文件，所以就试着在框里输入，于是返回了index.php,感觉不是我想要的，所以返回上一级，也就是<code>dir ../..</code>,然后一个文件夹一个文件夹打开看，都没有,继续返回<code>../../..</code>，然后一个个打开，用眼睛去看，终于在home里面找到一个<code>flag.txt</code>,于是我就<code>cat ../../../home/flag.txt</code>，终于拿到了flag<br>当然也可以把<code>|</code>换成<code>&amp;</code>，<code>|</code>运算符是执行<code>|</code>后面的语句，如果<code>|</code>前面或者后面的语句不能执行就会直接报错，然后<code>&amp;</code>是符号前后的都会执行，但如果哪个错就会报错哪个，但正确的指令仍然会运行，然后还有<code>||</code>和<code>&amp;&amp;</code>，这两个的功能和单个的恰好相反,也就是说<code>&amp;&amp;</code>的用法和<code>|</code>一样，<code>||</code>的用法和<code>&amp;</code>一样，（暂时个人感觉是这样，如果以后发现有什么问题再补上吧）,<code>||</code>和<code>&amp;&amp;</code>是条件or和and，而<code>|</code>,<code>&amp;</code>,<code>^</code>,<code>~</code>以及<code>&gt;&gt;</code>和<code>&lt;&lt;</code>都是位运算<br>详情见<span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS93M2Nub3RlL2JpdC1vcGVyYXRpb24uaHRtbA==">位运算</span></p>
+<h1 id="simple-js"><a href="#simple-js" class="headerlink" title="simple_js"></a>simple_js</h1><p>题目描述：小宁发现了一个网页，但却一直输不对密码。(Flag格式为 Cyberpeace{xxxxxxxxx} )<br>打开看到弹窗，输入几下都是返回fauxpasword，果然还是得祖传f12，看到一串逗号隔开的数字，打开devc++,将这些数字统统转化成字符，就是Fauxpsword，然后往下看，一堆x开头的数字，想来是16进制，然后打开在线解码，当然devc++也行，然后又是一堆数字，再转化成字符，根据提示，打包提交，确实是flag<br>这个就是js弹窗的知识点，会看js代码就行</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%A4%8D%E7%8E%B0/" rel="tag"><i class="ic i-tag"></i> 复现</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-02-28 20:30:24" itemprop="dateModified" datetime="2022-02-28T20:30:24+08:00">2022-02-28</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="muhua WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="muhua Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="muhua PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>muhua <i class="ic i-at"><em>@</em></i>暮间的花园
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/" title="xctf新手场">http://example.com/2021/03/28/xctf新手场/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeuv80yoj20zk0m8kjl.jpg" title="学习ctf的体验与心得">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>学习ctf的体验与心得</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/04/24/sqlilabtrain/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh0m9pdj20zk0m8hdt.jpg" title="sqlilabs less-1-17">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>sqlilabs less-1-17</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#view-source"><span class="toc-number">1.</span> <span class="toc-text">view_source</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#robots"><span class="toc-number">2.</span> <span class="toc-text">robots</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#backup"><span class="toc-number">3.</span> <span class="toc-text">backup</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cookie"><span class="toc-number">4.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#disabled-button"><span class="toc-number">5.</span> <span class="toc-text">disabled_button</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#weak-auth"><span class="toc-number">6.</span> <span class="toc-text">weak_auth</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#simple-php"><span class="toc-number">7.</span> <span class="toc-text">simple_php</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#get-post"><span class="toc-number">8.</span> <span class="toc-text">get_post</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xff-referer"><span class="toc-number">9.</span> <span class="toc-text">xff_referer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#webshell"><span class="toc-number">10.</span> <span class="toc-text">webshell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#command-execution"><span class="toc-number">11.</span> <span class="toc-text">command_execution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#simple-js"><span class="toc-number">12.</span> <span class="toc-text">simple_js</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="muhua"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">muhua</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">4</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/04/24/sqlilabtrain/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/24/sqlilabtrain/" title="sqlilabs less-1-17">sqlilabs less-1-17</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" title="apk反编译工具的安装及使用">apk反编译工具的安装及使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" title="学习ctf的体验与心得">学习ctf的体验与心得</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/20/sqlbypass/" title="sqlbypass">sqlbypass</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/02/buu%E8%AE%B0%E5%BD%95(1)/" title="buu记录(1)">buu记录(1)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/12/phpcharact/" title="php特性部分知识点">php特性部分知识点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/28/(2)check_in_wp/" title="2021下半年的一些比赛部分题解">2021下半年的一些比赛部分题解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/" title="xctf新手场">xctf新手场</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/28/%E8%BF%91%E6%9C%9F%E9%83%A8%E5%88%86%E8%B5%9B%E9%A2%98%E7%9A%84wp/" title="近期部分赛题的wp">近期部分赛题的wp</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">muhua @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/03/28/xctf新手场/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
