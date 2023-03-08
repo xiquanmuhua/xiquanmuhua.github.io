@@ -88,12 +88,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,92 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/05/12/buu%E8%AE%B0%E5%BD%95(2)/" itemprop="url" title="buu记录(2)"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></a>
+    <a href="/2023/03/05/java%E5%8F%8D%E5%B0%84%E6%B5%85%E5%AD%A6/" itemprop="url" title="java反射浅学"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclga70tsj20zk0m84mr.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-03-05 20:22:32">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-05T20:22:32+08:00">2023-03-05</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/05/java%E5%8F%8D%E5%B0%84%E6%B5%85%E5%AD%A6/" itemprop="url" title="java反射浅学">java反射浅学</a></h3>
+    <div class="excerpt">
+        基本语法还是得有点基础，至少能看得懂的样子
+首先是写.java文件的时候，名字和公有类名必须一致：
+123456789101112131415public class TrainPrint &amp;#123; public TrainPrint() &amp;#123; System.out.printf(&amp;quot;Initial %s\n&amp;quot;, this.getClass()); &amp;#125; void hana()&amp;#123; System.out.printf(&amp;quot;hana! \n&amp;quot;); &amp;#125;...
+    </div>
+    <a href="/2023/03/05/java%E5%8F%8D%E5%B0%84%E6%B5%85%E5%AD%A6/" itemprop="url" title="java反射浅学" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/02/20/check_in_wp(3)/" itemprop="url" title="2022年的一些比赛部分题解"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-02-20 22:12:50">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-20T22:12:50+08:00">2023-02-20</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/20/check_in_wp(3)/" itemprop="url" title="2022年的一些比赛部分题解">2022年的一些比赛部分题解</a></h3>
+    <div class="excerpt">
+        bytectfwebdouble sqli访问，首先后面的参数id就很可疑，尝试mysql注入，单引号闭合，发现回显有点奇怪，尝试万能密码，发现回显是concat(1,1)=1，再直接输入?id=1|1--+，这时我仍以为是mysql注入，这个concat就是个连接，那么直接在||之后注入就行，然后查询?id=1||(select database()),得到一个default，但再用mysql注入就不行了遇到无回显的时候直接出了一个something in...
+    </div>
+    <a href="/2023/02/20/check_in_wp(3)/" itemprop="url" title="2022年的一些比赛部分题解" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/05/25/redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" title="redis环境搭建"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicm07ih54j20zk0m84qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2022-05-25 18:53:28">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-05-25T18:53:28+08:00">2022-05-25</time>
+  </span>
+</div>
+
+    <h3><a href="/2022/05/25/redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" title="redis环境搭建">redis环境搭建</a></h3>
+    <div class="excerpt">
+        虽然经常听到这个知识点，某比赛还遇到过，但当时属实是对这方面的理解太弱，没有太上心，觉得不是自己马上需要接触的就没去搞，总之就是找借口摸了，嘛，现在对服务器上的docker之类的基本也会使用了，所以决定搭一下环境，说不定顺便还能复现一些点
+环境搭建还是使用自己的服务器，按照师傅们写的教程走
+简单查一下镜像：
+
+docker search redis第一个就叫redis，直接上
+
+拉取镜像：
+
+docker pull redis
+
+建个文件夹进去，似乎需要映射文件和文件夹，下载个文件：
+1wget...
+    </div>
+    <a href="/2022/05/25/redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" title="redis环境搭建" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/05/12/buu%E8%AE%B0%E5%BD%95(2)/" itemprop="url" title="buu记录(2)"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></a>
   </div>
   <div class="info">
     
@@ -145,7 +230,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" itemprop="url" title="apk反编译工具的安装及使用"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></a>
+    <a href="/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" itemprop="url" title="apk反编译工具的安装及使用"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></a>
   </div>
   <div class="info">
     
@@ -177,7 +262,7 @@ pwntool这个主要是看xml文件用的
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/09/28/(2)check_in_wp/" itemprop="url" title="2021下半年的一些比赛部分题解"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclxfdlttj20zk0m8npd.jpg"></a>
+    <a href="/2021/09/28/(2)check_in_wp/" itemprop="url" title="2021下半年的一些比赛部分题解"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></a>
   </div>
   <div class="info">
     
@@ -201,7 +286,7 @@ pwntool这个主要是看xml文件用的
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/09/20/sqlbypass/" itemprop="url" title="sqlbypass"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></a>
+    <a href="/2021/09/20/sqlbypass/" itemprop="url" title="sqlbypass"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicis3attqj20zk0m8k7l.jpg"></a>
   </div>
   <div class="info">
     
@@ -228,7 +313,7 @@ pwntool这个主要是看xml文件用的
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/09/12/phpcharact/" itemprop="url" title="php特性部分知识点"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gicm0n457cj20zk0m8e81.jpg"></a>
+    <a href="/2021/09/12/phpcharact/" itemprop="url" title="php特性部分知识点"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclflwv2aj20zk0m84qp.jpg"></a>
   </div>
   <div class="info">
     
@@ -261,7 +346,7 @@ $：检测字符串末尾是否有设定的...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/08/02/buu%E8%AE%B0%E5%BD%95(1)/" itemprop="url" title="buu记录(1)"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipey0a334j20zk0m8qpt.jpg"></a>
+    <a href="/2021/08/02/buu%E8%AE%B0%E5%BD%95(1)/" itemprop="url" title="buu记录(1)"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipevuctzzj20zk0m84qp.jpg"></a>
   </div>
   <div class="info">
     
@@ -285,7 +370,7 @@ $：检测字符串末尾是否有设定的...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/05/28/%E8%BF%91%E6%9C%9F%E9%83%A8%E5%88%86%E8%B5%9B%E9%A2%98%E7%9A%84wp/" itemprop="url" title="近期部分赛题的wp"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclx29mstj20zk0m8hdt.jpg"></a>
+    <a href="/2021/05/28/%E8%BF%91%E6%9C%9F%E9%83%A8%E5%88%86%E8%B5%9B%E9%A2%98%E7%9A%84wp/" itemprop="url" title="近期部分赛题的wp"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclffsa1cj20zk0m811l.jpg"></a>
   </div>
   <div class="info">
     
@@ -306,87 +391,16 @@ $：检测字符串末尾是否有设定的...
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2021/04/24/sqlilabtrain/" itemprop="url" title="sqlilabs less-1-17"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="Created: 2021-04-24 10:20:41">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2021-04-24T10:20:41+08:00">2021-04-24</time>
-  </span>
-</div>
-
-    <h3><a href="/2021/04/24/sqlilabtrain/" itemprop="url" title="sqlilabs less-1-17">sqlilabs less-1-17</a></h3>
-    <div class="excerpt">
-        less-1虽然教程上说末尾加上--+，也说了这个+是为了代替一个空格，因为在url末尾加上的空格会被吃掉，所以，实际上也可以加上%20（空格的url编码），或者直接加上空格再外加一个#，总之空格存在就能让--发挥注释的功能，使得构造的sql语句顺利逃出来，所以根据这个道理，直接在末尾加上一个单引号将后面的单引号闭合的效果也是一样的，于是我开始爆，手爆真是太难了
-1?id=-1&amp;#x27;union 1,2,(select group_concat(schema_name) from information_schema.schemata,select...
-    </div>
-    <a href="/2021/04/24/sqlilabtrain/" itemprop="url" title="sqlilabs less-1-17" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/" itemprop="url" title="xctf新手场"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclhnx9glj20zk0m8npd.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="Created: 2021-03-28 12:34:32">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2021-03-28T12:34:32+08:00">2021-03-28</time>
-  </span>
-</div>
-
-    <h3><a href="/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/" itemprop="url" title="xctf新手场">xctf新手场</a></h3>
-    <div class="excerpt">
-        总之就假期很划水，所以博客搞好了这么久才开始写，好，话不多说直接写
-view_source题目描述：X老师让小宁同学查看一个网页的源代码，但小宁同学发现鼠标右键好像不管用了。题目提示flag在源码里面，但通常的右键查看源码用不了，这个时候可以使用网页自带的f12页面查看，如果这个办法也不能使用（因为不知为啥现在环境打不开，所以不清楚），那就在网页地址前加上view-source:然后访问就能看到源码，然后找到flag，提交（附：快捷键...
-    </div>
-    <a href="/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/" itemprop="url" title="xctf新手场" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" itemprop="url" title="学习ctf的体验与心得"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gicit4jrvuj20zk0m8785.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="Created: 2020-12-14 22:11:27">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2020-12-14T22:11:27+08:00">2020-12-14</time>
-  </span>
-</div>
-
-    <h3><a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" itemprop="url" title="学习ctf的体验与心得">学习ctf的体验与心得</a></h3>
-    <div class="excerpt">
-        感觉确实挺有趣，就学了
-需要的东西和学习其他东西没什么区别，没有什么是能毫不付出就能增加的，有些时候东西也许看似增加了，其实是在偷偷减少你更重要的东西
-没有自己的目标真的挺无力的，连玩游戏都找不到方向，更何况学习呢
-    </div>
-    <a href="/2020/12/14/%E5%AD%A6%E4%B9%A0ctf%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E5%BF%83%E5%BE%97/" itemprop="url" title="学习ctf的体验与心得" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
 
   
+  <nav class="pagination">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="ic i-angle-right" aria-label="Next page"></i></a>
+    </div>
+  </nav>
 
 
 
@@ -412,13 +426,13 @@ view_source题目描述：X老师让小宁同学查看一个网页的源代码�
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">10</span>
+        <span class="count">13</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">4</span>
+        <span class="count">5</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -447,6 +461,7 @@ view_source题目描述：X老师让小宁同学查看一个网页的源代码�
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/page/2/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -469,16 +484,7 @@ view_source题目描述：X老师让小宁同学查看一个网页的源代码�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/12/phpcharact/" title="php特性部分知识点">php特性部分知识点</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/28/xctf%E6%96%B0%E6%89%8B%E5%9C%BA/" title="xctf新手场">xctf新手场</a></span>
+    <span><a href="/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" title="apk反编译工具的安装及使用">apk反编译工具的安装及使用</a></span>
   </li>
 
       
@@ -496,43 +502,7 @@ view_source题目描述：X老师让小宁同学查看一个网页的源代码�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/08/02/buu%E8%AE%B0%E5%BD%95(1)/" title="buu记录(1)">buu记录(1)</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/10/26/akp%E5%8F%8D%E7%BC%96%E8%AF%91/" title="apk反编译工具的安装及使用">apk反编译工具的安装及使用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/09/28/(2)check_in_wp/" title="2021下半年的一些比赛部分题解">2021下半年的一些比赛部分题解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2021/04/24/sqlilabtrain/" title="sqlilabs less-1-17">sqlilabs less-1-17</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/05/28/%E8%BF%91%E6%9C%9F%E9%83%A8%E5%88%86%E8%B5%9B%E9%A2%98%E7%9A%84wp/" title="近期部分赛题的wp">近期部分赛题的wp</a></span>
   </li>
 
       
@@ -550,7 +520,52 @@ view_source题目描述：X老师让小宁同学查看一个网页的源代码�
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/09/28/(2)check_in_wp/" title="2021下半年的一些比赛部分题解">2021下半年的一些比赛部分题解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/12/phpcharact/" title="php特性部分知识点">php特性部分知识点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/28/%E8%BF%91%E6%9C%9F%E9%83%A8%E5%88%86%E8%B5%9B%E9%A2%98%E7%9A%84wp/" title="近期部分赛题的wp">近期部分赛题的wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/09/20/sqlbypass/" title="sqlbypass">sqlbypass</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/05/25/redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="redis环境搭建">redis环境搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/02/buu%E8%AE%B0%E5%BD%95(1)/" title="buu记录(1)">buu记录(1)</a></span>
   </li>
 
   </ul>
@@ -565,7 +580,7 @@ view_source题目描述：X老师让小宁同学查看一个网页的源代码�
   <div class="copyright">
     
     &copy; 2010 – 
-    <span itemprop="copyrightYear">2022</span>
+    <span itemprop="copyrightYear">2023</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
